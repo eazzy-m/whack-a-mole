@@ -1,0 +1,225 @@
+.body {
+    width: 100%;
+    height: 100vh;
+    min-height: 900px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.title {
+    font-family: "Academy Engraved LET";
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: "American Typewriter";
+    margin: 0 0 30px;
+}
+
+.button {
+    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    color: black;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: 15px;
+    font-family: "Helvetica Neue";
+}
+
+.button:hover {
+    font-size: 17px;
+    border-right: 0.5px solid black;
+    border-top: 0.5px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.hide-button {
+    display: none;
+}
+
+.new-game-container {
+    height: 30px;
+    margin-bottom: 30px;
+    visibility: visible;
+}
+
+.hide-new-game-container {
+    visibility: hidden;
+}
+
+.grid {
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.game-cursor {
+    cursor: url(./images/hammer.png) 25 25, auto;
+}
+
+.game-cursor:active {
+    cursor: url(./images/hammer-down.png) 25 25, auto;
+}
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.mole {
+    background-image: url(./images/mole.png);
+    object-fit: contain;
+    object-position: left;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    color: cornflowerblue;
+    margin-bottom: 10px;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    margin-top: 178px;
+    margin-left: 60px;
+}
+
+.form-container {
+    margin: 30px 0;
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.input-label {
+    font-family: "Helvetica Neue";
+    margin-right: 30px;
+}
+
+.name-input {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #a1c4fd;
+    font-family: "Helvetica Neue";
+}
+
+.submit-button {
+    margin: 0;
+}
+
+.table {
+    width: 300px;
+    height: 604px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Helvetica Neue";
+    box-sizing: content-box;
+}
+
+
+.table_titles {
+    width: 300px;
+    font-family: "Helvetica Neue";
+}
+
+th {
+    height: 50px;
+    width: 300px;
+}
+
+tr {
+    height: 60px;
+    width: 300px;
+    border-bottom: 1px solid black;
+}
+
+.user-name {
+    height: 60px;
+    width: 150px;
+    text-align: center;
+
+}
+
+.user-score {
+    height: 60px;
+    width: 150px;
+    text-align: center;
+
+}
+
+tr:nth-of-type(10) {
+    border-bottom: none;
+}
+
+.clear {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.footer {
+    margin-left: 150px;
+}
+
+
+@media screen and (max-width: 1060px) {
+    .body {
+        min-height: 1650px;
+    }
+    .main {
+        flex-direction: column;
+        padding-left: 5px;
+    }
+    .grid {
+        width: 462px;
+        height: 462px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .square {
+        width: calc(456px /3);
+        height: calc(456px /3);
+    }
+    .mole {
+        background-image: url(./images/mole-small.png);
+        object-fit: contain;
+        object-position: left;
+    }
+    .aside {
+        margin: 50px auto 0;
+    }
+    .footer {
+        margin: 0 auto;
+    }
+}
