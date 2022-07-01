@@ -22,12 +22,12 @@ if (downloadedList.length > 0) { // if were previous sessions, first time the hi
     }
 }
 
-const playingTime = 20; // game session time
+const PLAYINGTIME = 60; // game session time
 
 let result = 0;
 score.textContent = result + '';
-let currentTime = playingTime;
-timeLeft.textContent = playingTime + '';
+let currentTime = PLAYINGTIME;
+timeLeft.textContent = PLAYINGTIME + '';
 let hitPosition;
 let timerId;
 let countDownTimerId;
@@ -103,7 +103,7 @@ const newGame = () => { //
     newGameButton.addEventListener('click', gameStarting);
     // preparing for new game
     nameInput.value = ''
-    currentTime = playingTime;
+    currentTime = PLAYINGTIME;
 };
 
 function drawTableRow(userName, userScore) {
@@ -162,7 +162,7 @@ form.addEventListener('submit', e => {
 
     result = 0;
     score.textContent = result + '';
-    timeLeft.textContent = playingTime + '';
+    timeLeft.textContent = PLAYINGTIME + '';
     toggleForm();
     drawTable();
     newGame();

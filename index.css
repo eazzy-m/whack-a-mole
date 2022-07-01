@@ -95,6 +95,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    width: 315px;
 }
 
 .link {
@@ -102,6 +103,11 @@
     font-family: "Helvetica Neue";
     color: cornflowerblue;
     margin-bottom: 10px;
+    transition: color .3s ease-in-out;
+}
+
+.link:hover {
+    color: #467eb6;
 }
 
 .aside {
